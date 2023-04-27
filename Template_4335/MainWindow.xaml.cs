@@ -12,17 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Template_4335.Class;
 using Template_4335.Windows;
+using Template_4335.Class;
 
 namespace Template_4335
 {
-    /// <summary>
+    /// <summary>vv
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly ApplicationContext _context;
+
         public MainWindow()
         {
+            _context = new ApplicationContext();
             InitializeComponent();
         }
 
@@ -76,8 +81,9 @@ namespace Template_4335
 
         private void Maksimov_4335_Click(object sender, RoutedEventArgs e)
         {
-            Maksimov_4335 mak = new Maksimov_4335();
-            mak.Show();
+            //Maksimov_4335 mak = new Maksimov_4335(_context);
+            //mak.Show();
+            new Maksimov_4335(_context).Show();
         }
 
         private void Akhmetova_4335_Click(object sender, RoutedEventArgs e)
